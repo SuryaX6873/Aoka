@@ -7,7 +7,7 @@ import {
 } from "seyfert";
 import { Cooldown } from "@slipher/cooldown";
 
-import { bot } from "#config";
+import { config } from "#aoka";
 
 @Declare({
   name: "ping",
@@ -25,7 +25,7 @@ export default class PingCommand extends Command {
     const pong = Date.now() - (ctx?.interaction?.createdTimestamp ?? ctx?.message?.createdTimestamp);
     
     const embed = new Embed()
-    .setColor(bot.primaryColor)
+    .setColor(config.primaryColor)
     .addFields({
       name: "Client Latency",
       value: `\`${ping} ms\``,

@@ -23,7 +23,6 @@
         "stripInternal": true,
         "paths": {
             "#aoka": ["./aoka/index.ts"],
-            "#config": ["./config/index.ts"],
             "#data": ["./data/index.ts"]
         }
     },

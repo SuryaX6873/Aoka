@@ -8,7 +8,7 @@ import {
 } from "seyfert";
 import { Cooldown } from "@slipher/cooldown";
 
-import { bot, emoji } from "#config";
+import { config, emoji } from "#aoka";
 
 @Declare({
   name: "help",
@@ -33,11 +33,11 @@ export default class NameCommand extends Command {
 }
 
 async function helpCommand(ctx) {
-  const embed = new Embed().setColor(bot.primaryColor).setTitle("Help Command")
+  const embed = new Embed().setColor(config.primaryColor).setTitle("Help Command")
   ctx.write({ embeds: [embed] });
 }
 
 async function commandsList(ctx) {
-  const embed = new Embed().setColor(bot.primaryColor).setTitle("Commands List");
+  const embed = new Embed().setColor(config.primaryColor).setTitle("Commands List");
   ctx.write({ embeds: [embed] });
 }

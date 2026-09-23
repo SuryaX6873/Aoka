@@ -5,7 +5,7 @@ import { CooldownMiddlewares, cooldown } from "@slipher/cooldown";
 import { ActivityType, PresenceUpdateStatus } from "seyfert/lib/types";
 import { formatMemoryUsage } from "seyfert/lib/common/it/logger";
 
-import { bot } from "#config";
+import { config } from "#aoka";
 
 const plugins = definePlugins(
   Yuna.plugin({
@@ -42,7 +42,7 @@ const client = new Client({
     replied_user: false
   },
   commands: {
-    prefix: (message) => bot.cmdPrefix,
+    prefix: (message) => config.cmdPrefix,
     reply: (ctx) => true,
     deferReplyResponse: (ctx) => ({ content: "Sending request..." }),
     defaults: {
