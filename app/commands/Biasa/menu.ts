@@ -2,12 +2,12 @@ import {
   Declare,
   ActionRow,
   Button,
+  ButtonStyle,
   StringSelectMenu,
   StringSelectOption,
   Command,
   type CommandContext
 } from 'seyfert';
-import { ButtonStyle } from 'seyfert'
 import { Cooldown } from "@slipher/cooldown";
 
 @Declare({

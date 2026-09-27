@@ -3,7 +3,8 @@ import {
   Command,
   type CommandContext,
   ActionRow,
-  Button
+  Button,
+  ButtonStyle,
 } from "seyfert";
 import { Cooldown } from "@slipher/cooldown";
 
