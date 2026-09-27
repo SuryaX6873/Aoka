@@ -80,7 +80,7 @@ const components = new Container().addComponents(
 		"-# This message was composed using components, check out the request:",
 	),
 
-	new File().setMedia("https://archive.diablosat.cc/archive/claude-code.tar.gz"),
+	//new File().setMedia("https://archive.diablosat.cc/archive/claude-code.tar.gz"),
 );
 
 ctx.write({ components: [components], flags: MessageFlags.IsComponentsV2 });
