@@ -31,49 +31,42 @@ export default class KontainerCommand extends Command {
   	const guild = await ctx.guild();
   	const bot = await ctx.me();
 const components = new Container().addComponents(
-	new MediaGallery().addItems(
+	/*new MediaGallery().addItems(
 		new MediaGalleryItem().setMedia(guild.iconURL()),
-	),
+	),*/
 	new TextDisplay().setContent(
 		"## Introducing New Components for Messages!\nWe're bringing new components to messages that you can use in your apps. They allow you to have full control over the layout of your messages.\n\nOur previous components system, while functional, had limitations:\n- Content, attachments, embeds, and components had to follow fixed positioning rules\n- Visual styling options were limited\n\nOur new component system addresses these challenges with fully composable components that can be arranged and laid out in any order, allowing for a more flexible and visually appealing design. Check out the [changelog](https://discord.com/developers/docs/change-log) for more details.",
 	),
-	new MediaGallery().addItems(
+	/*new MediaGallery().addItems(
 		new MediaGalleryItem().setMedia(ctx.author.defaultAvatarURL()),
-	),
+	),*/
 	new Section()
 		.setComponents(
-			new TextDisplay().setContent("A brief overview of components:"),
+			new TextDisplay().setContent("### A brief overview of components:"),
 		)
 		.setAccessory(
 			new Button()
-				.setStyle(ButtonStyle.Link)
+				.setStyle(ButtonStyle.Success)
 				.setLabel("Overview")
-				.setURL("https://discord.com/developers/docs/components/overview"),
 		),
 	new Section()
 		.setComponents(
-			new TextDisplay().setContent("A list of all the components:"),
+			new TextDisplay().setContent("### Biasa\n`a`,`bc`,`cde`"),
 		)
 		.setAccessory(
 			new Button()
-				.setStyle(ButtonStyle.Link)
-				.setLabel("Reference")
-				.setURL(
-					"https://discord.com/developers/docs/components/reference#what-is-a-component-component-types",
-				),
+				.setStyle(ButtonStyle.Primary)
+				.setLabel("Perintah Biasa")
 		),
 
 	new Section()
 		.setComponents(
-			new TextDisplay().setContent("Get started with message components:"),
+			new TextDisplay().setContent("### Get started with message components:"),
 		)
 		.setAccessory(
 			new Button()
-				.setStyle(ButtonStyle.Link)
+				.setStyle(ButtonStyle.Secondary)
 				.setLabel("Guide")
-				.setURL(
-					"https://discord.com/developers/docs/components/using-message-components",
-				),
 		),
 	new Separator(),
 	new TextDisplay().setContent(
