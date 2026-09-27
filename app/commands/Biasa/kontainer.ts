@@ -29,6 +29,7 @@ import { Cooldown } from "@slipher/cooldown";
 export default class KontainerCommand extends Command {
   async run(ctx: CommandContext) {
   	const guild = await ctx.guild();
+  	const bot = await ctx.me();
 const components = new Container().addComponents(
 	new MediaGallery().addItems(
 		new MediaGalleryItem().setMedia(guild.iconURL()),
@@ -79,7 +80,7 @@ const components = new Container().addComponents(
 		"-# This message was composed using components, check out the request:",
 	),
 
-	new File().setMedia("data.json"),
+	new File().setMedia(me.defaultAvatarURL()),
 );
 
 ctx.write({ components: [components], flags: MessageFlags.IsComponentsV2 });
