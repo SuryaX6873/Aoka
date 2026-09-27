@@ -8,6 +8,7 @@ export default config.bot({
     locations: {
         base: "app",
         commands: "commands",
+        components: "components",
         events: "events",
     },
     intents: ["Guilds", "GuildMessages", "MessageContent"]
