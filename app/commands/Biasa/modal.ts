@@ -21,6 +21,6 @@ export default class HelloWorldCommand extends Command {
   }
 
   async handleModal(i: ModalSubmitInteraction) {
-    return i.write({ content: 'Hello World 👋' });
+    return i.editOrReply({ content: 'Hello World 👋' });
   }
 }
