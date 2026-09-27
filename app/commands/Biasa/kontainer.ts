@@ -46,6 +46,7 @@ const components = new Container().addComponents(
 		)
 		.setAccessory(
 			new Button()
+				.setCustomId("overview")
 				.setStyle(ButtonStyle.Success)
 				.setLabel("Overview")
 		),
@@ -55,6 +56,7 @@ const components = new Container().addComponents(
 		)
 		.setAccessory(
 			new Button()
+				.setCustomId("biasa")
 				.setStyle(ButtonStyle.Primary)
 				.setLabel("Perintah Biasa")
 		),
@@ -65,6 +67,7 @@ const components = new Container().addComponents(
 		)
 		.setAccessory(
 			new Button()
+				.setCustomId("guide")
 				.setStyle(ButtonStyle.Secondary)
 				.setLabel("Guide")
 		),
