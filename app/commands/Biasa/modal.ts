@@ -1,5 +1,8 @@
 import {
   Modal,
+  Label,
+  TextInput,
+  TextInputStyle,
   Command,
   Declare,
   type ModalSubmitInteraction,
@@ -13,8 +16,13 @@ import {
 export default class HelloWorldCommand extends Command {
   async run(ctx: CommandContext) {
     const modal = new Modal()
-      .setCustomId('hello')
-      .setTitle('Hello')
+  .setCustomId('feedback-modal')
+  .setTitle('Feedback')
+  .addComponents(
+    new Label()
+    .setLabel('Rating')
+    .setComponent(new TextInput().setCustomId('rating').setStyle(TextInputStyle.Short)),
+  )
       .run(this.handleModal);
 
     await ctx.modal(modal);
