@@ -5,6 +5,7 @@ import {
   TextInputStyle,
   Command,
   Declare,
+  IgnoreCommand,
   type ModalSubmitInteraction,
   type CommandContext,
 } from 'seyfert';
@@ -12,6 +13,7 @@ import {
 @Declare({
   name: 'modal',
   description: 'I will send you a hello world message',
+  ignore: IgnoreCommand.Message
 })
 export default class HelloWorldCommand extends Command {
   async run(ctx: CommandContext) {

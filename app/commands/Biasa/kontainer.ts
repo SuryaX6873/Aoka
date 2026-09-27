@@ -37,7 +37,7 @@ const components = new Container().addComponents(
 		"## Introducing New Components for Messages!\nWe're bringing new components to messages that you can use in your apps. They allow you to have full control over the layout of your messages.\n\nOur previous components system, while functional, had limitations:\n- Content, attachments, embeds, and components had to follow fixed positioning rules\n- Visual styling options were limited\n\nOur new component system addresses these challenges with fully composable components that can be arranged and laid out in any order, allowing for a more flexible and visually appealing design. Check out the [changelog](https://discord.com/developers/docs/change-log) for more details.",
 	),
 	new MediaGallery().addItems(
-		new MediaGalleryItem().setMedia(ctx.author.displayAvatarURL()),
+		new MediaGalleryItem().setMedia(ctx.author.defaultAvatarURL()),
 	),
 	new Section()
 		.setComponents(
