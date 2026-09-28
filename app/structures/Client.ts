@@ -81,7 +81,7 @@ const clientOptions = {
 class CustomClient extends Client<true> {
     constructor(extendedOptions={}) {
         super({
-            ...clientOption,
+            ...clientOptions,
             ...extendedOptions
         });
 
