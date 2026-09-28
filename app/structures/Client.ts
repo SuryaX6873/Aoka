@@ -1,7 +1,7 @@
 import { Client, MessageFlags } from "seyfert";
 import { ActivityType, PresenceUpdateStatus } from "seyfert/lib/types";
 
-import { config } from "#aoka";
+import { config } from "#data";
 
 const clientOptions = {
     allowedMentions: {
@@ -60,9 +60,9 @@ const clientOptions = {
     },
     gateway: {
         properties: {
-        os: "android",
-        browser: "Discord Android",
-        device: "android"
+            os: "android",
+            browser: "Discord Android",
+            device: "android"
         }
     },
     presence: (shardId) => ({

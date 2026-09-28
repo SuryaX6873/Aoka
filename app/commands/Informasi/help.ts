@@ -8,7 +8,7 @@ import {
 } from "seyfert";
 import { Cooldown } from "@slipher/cooldown";
 
-import { config, emoji } from "#aoka";
+import { config, emoji } from "#data";
 
 @Declare({
   name: "help",

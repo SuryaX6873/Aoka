@@ -7,7 +7,7 @@ import {
 } from "seyfert";
 import { Cooldown } from "@slipher/cooldown";
 
-import { config } from "#aoka";
+import { config } from "#data";
 
 @Declare({
   name: "ping",

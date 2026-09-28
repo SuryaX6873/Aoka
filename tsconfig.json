@@ -22,7 +22,6 @@
         "baseUrl": ".",
         "stripInternal": true,
         "paths": {
-            "#aoka": ["./aoka/index.ts"],
             "#data": ["./data/index.ts"]
         }
     },

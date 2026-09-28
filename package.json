@@ -7,6 +7,10 @@
   "scripts": {
     "start": "bun app/index.ts"
   },
+  "devDependencies": {
+    "@types/bun": "^1",
+    "typescript": "^7"
+  },
   "dependencies": {
     "@slipher/cooldown": "^1.0.0",
     "seyfert": "^5.1.0",
