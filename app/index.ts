@@ -54,5 +54,10 @@ Logger.customize((logger, level, args) => {
 });
 
 import { Client } from "./structures/Client";
-new Client({ globalMiddlewares: Object.keys(globalMiddlewares), plugins })
-    .setService({ middlewares: globalMiddlewares })
+const client = new Client({ globalMiddlewares: Object.keys(globalMiddlewares), plugins })
+
+client.setService({ middlewares: globalMiddlewares });
+
+client.start().then(
+    _ => client.uploadCommands()
+)
