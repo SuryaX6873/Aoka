@@ -2,7 +2,7 @@ import { Logger, type ParseClient, definePlugins } from "seyfert";
 import { Yuna } from "yunaforseyfert";
 import { CooldownMiddlewares, cooldown } from "@slipher/cooldown";
 import { formatMemoryUsage } from "seyfert/lib/common/it/logger";
-import globalMiddlewares from "./middlewares/index";
+import * as globalMiddlewares from "./middlewares/index";
 
 const plugins = definePlugins(
     Yuna.plugin({
