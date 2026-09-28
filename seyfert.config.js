@@ -1,6 +1,3 @@
-process.on("unhandledRejection", info => console.error("UnhandledRejection?!", info));
-process.on("uncaughtException", info => console.error("UncaughtException?!", info));
-
 import { config } from "seyfert";
 
 export default config.bot({

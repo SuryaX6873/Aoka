@@ -34,6 +34,9 @@ const option = {
   defaultMemberPermissions: ["ManageGuild", "Administrator"],
   integrationTypes: ["GuildInstall"],
   contexts: ["Guild"],
+  props: {
+    category: "Developer"
+  },
 })
 @Options(option)
 @DeclareParserConfig(ParserRecommendedConfig.Eval)

@@ -15,7 +15,7 @@ import {
   description: 'I will send you a hello world message',
   ignore: IgnoreCommand.Message
 })
-export default class HelloWorldCommand extends Command {
+export default class ModalCommand extends Command {
   async run(ctx: CommandContext) {
     const modal = new Modal()
   .setCustomId('feedback-modal')

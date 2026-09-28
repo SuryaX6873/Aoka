@@ -17,6 +17,9 @@ import { config, emoji } from "#data";
   contexts: ["Guild"],
   integrationTypes: ["GuildInstall"],
   botPermissions: ["EmbedLinks"],
+  props: {
+    category: "Informasi"
+  },
 })
 @Cooldown.user(10_000)
 @Options({
@@ -25,7 +28,7 @@ import { config, emoji } from "#data";
   })
 })
 
-export default class NameCommand extends Command {
+export default class HelpCommand extends Command {
   async run(ctx: CommandContext) {
     if (ctx.options?.command?.length) helpCommand(ctx);
     else commandsList(ctx);

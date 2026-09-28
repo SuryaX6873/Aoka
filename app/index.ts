@@ -1,8 +1,12 @@
+process.on("unhandledRejection", info => console.error("UnhandledRejection?!", info));
+process.on("uncaughtException", info => console.error("UncaughtException?!", info));
+
 import { Logger, type ParseClient, definePlugins } from "seyfert";
 import { Yuna } from "yunaforseyfert";
 import { CooldownMiddlewares, cooldown } from "@slipher/cooldown";
 import { formatMemoryUsage } from "seyfert/lib/common/it/logger";
 import * as globalMiddlewares from "./middlewares/index";
+import { webhookClientPlugin } from "./plugins/webhookClient.ts"
 
 const plugins = definePlugins(
     Yuna.plugin({
@@ -13,6 +17,7 @@ const plugins = definePlugins(
     cooldown({
       middleware: { global: true }
     }),
+    webhookClientPlugin(),
 );
 
 declare module "seyfert" {

@@ -16,6 +16,9 @@ import { config } from "#data";
   contexts: ["Guild", "BotDM"],
   integrationTypes: ["GuildInstall","UserInstall"],
   botPermissions: ["EmbedLinks"],
+  props: {
+    category: "Informasi"
+  },
 })
 @Cooldown.user(5_000)
 
