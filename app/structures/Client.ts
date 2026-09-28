@@ -84,7 +84,9 @@ class CustomClient extends Client<true> {
             ...extendedOptions
         });
 
-        this.start().then(client => client.uploadCommands());
+        this.start().then(
+             _=> this.uploadCommands()
+        );
     }
 }
 
