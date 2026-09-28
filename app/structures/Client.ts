@@ -79,8 +79,11 @@ const clientOptions = {
 };
 
 class CustomClient extends Client<true> {
-    constructor(extendeOptions={}) {
-        super(clientOptions[...extendeOptions]);
+    constructor(extendedOptions={}) {
+        super({
+            ...clientOption,
+            ...extendedOptions
+        });
 
         this.start().then(client => client.uploadCommands());
     }
