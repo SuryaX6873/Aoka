@@ -54,5 +54,5 @@ Logger.customize((logger, level, args) => {
 });
 
 import { Client } from "./structures/Client";
-new Client({ globalMiddlewares: Object.keys(globalMiddlewares) })
+new Client({ globalMiddlewares: Object.keys(globalMiddlewares), plugins })
     .setService({ middlewares: globalMiddlewares })

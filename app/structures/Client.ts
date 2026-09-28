@@ -75,7 +75,6 @@ const clientOptions = {
         since: Date.now(),
         afk: false,
     }),
-    plugins
 };
 
 class CustomClient extends Client<true> {
