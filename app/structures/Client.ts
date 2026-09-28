@@ -89,4 +89,4 @@ class CustomClient extends Client<true> {
     }
 }
 
-export { Client as CustomClient }
+export { CustomClient as Client }
